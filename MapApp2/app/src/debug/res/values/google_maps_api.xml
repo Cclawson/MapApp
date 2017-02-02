@@ -18,4 +18,11 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyBY8xvez9jcI6xikgDGP0qBK4AcgszVJ3E
     </string>
+  <string name="google_directions_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyDWfYqPCgbqI8n6c-xqp74ujbRZKVhYY5Y
+
+
+    </string>
+
+    AIzaSyDWfYqPCgbqI8n6c-xqp74ujbRZKVhYY5Y
 </resources>
