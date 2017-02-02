@@ -36,13 +36,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     }
 
 
-    public void OnMapButtonClick(View view)
-    {
+    public void OnMapButtonClick(View view) {
         m_mapControl.CreateRoute("143 Main St, Salt Lake City, UT", "555 Main St, Salt Lake City, UT");
-
-
-
     }
+
+    public void MakeRoute()
+    {
+        //m_mapControl.CreateRoute("START", "END");
+    }
+
 
 
     public void ProcessRoute(Route route)
@@ -66,6 +68,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
             }
 
             m_Map.addPolyline(opts);
+            m_Map.addMarker(new MarkerOptions().position(latLngs.get(0)).title("Start"));
+            m_Map.addMarker(new MarkerOptions().position(latLngs.get(latLngs.size()-1)).title("End"));
+
             m_Map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLngs.get(0),18));
         } else {
             System.err.println("Error adding route!");
