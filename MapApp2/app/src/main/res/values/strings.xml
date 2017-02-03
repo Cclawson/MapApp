@@ -4,4 +4,6 @@
     <string name="rewind"><![CDATA[<<]]></string>
     <string name="forward"><![CDATA[>>]]></string>
     <string name="pause">||</string>
+    <string name="title_activity_map">Map</string>
+    <string name="google_maps_key">AIzaSyDo1cqxl3Gq7J-toWLTu2a4KVmBPcwNFUc</string>
 </resources>
