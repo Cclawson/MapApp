@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,30 +22,29 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     private GoogleMap m_Map;
     private MapControl m_mapControl;// = new MapControl();
 
+    private EditText start;
+    private EditText finish;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         m_mapControl = new MapControl(this);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        start = (EditText)findViewById(R.id.startLoc);
+        finish = (EditText)findViewById(R.id.finishLoc);
+
     }
 
 
     public void OnMapButtonClick(View view) {
-        m_mapControl.CreateRoute("143 Main St, Salt Lake City, UT", "555 Main St, Salt Lake City, UT");
+        m_mapControl.CreateRoute(start.getText().toString(), finish.getText().toString());
     }
-
-    public void MakeRoute()
-    {
-        //m_mapControl.CreateRoute("START", "END");
-    }
-
 
 
     public void ProcessRoute(Route route)
@@ -71,7 +71,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
             m_Map.addMarker(new MarkerOptions().position(latLngs.get(0)).title("Start"));
             m_Map.addMarker(new MarkerOptions().position(latLngs.get(latLngs.size()-1)).title("End"));
 
-            m_Map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLngs.get(0),18));
+            m_Map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLngs.get(0),14));
         } else {
             System.err.println("Error adding route!");
         }

@@ -54,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
             int artistColumn = musicCursor.getColumnIndex
                     (android.provider.MediaStore.Audio.Media.ARTIST);
             //add songs to list
+            String info = "";
+
             do {
-                String info = "";
                 long thisId = musicCursor.getLong(idColumn);
                 String thisTitle = musicCursor.getString(titleColumn);
                 String thisArtist = musicCursor.getString(artistColumn);
