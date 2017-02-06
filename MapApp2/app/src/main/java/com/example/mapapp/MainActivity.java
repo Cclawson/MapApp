@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void OnMainButtonClick(View view)
     {
-        Intent intent = new Intent(this, MapActivity.class);
+        Intent intent = new Intent(this, SideNav.class);
         startActivity(intent);
     }
 

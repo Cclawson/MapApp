@@ -34,33 +34,33 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/name_input" />
+        android:id="@+id/etName" />
 
     <TextView
-        android:text="E-mail"
+        android:text="UserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/email_text" />
+        android:id="@+id/user_text" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:ems="10"
-        android:id="@+id/email_input" />
+        android:id="@+id/etUsername" />
 
     <TextView
-        android:text="Phone"
+        android:text="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/phone_text" />
+        android:id="@+id/pass_text" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/phone_input" />
+        android:id="@+id/etPassword" />
 
     <Space
         android:layout_width="match_parent"
@@ -70,12 +70,13 @@
         android:text="Create Account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:id="@+id/bRegister" />
 
     <TextView
         android:text="Already a member? Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:gravity="right" />
+        android:gravity="right"
+        android:onClick="goToLogin"/>
 </LinearLayout>

@@ -42,10 +42,16 @@
             android:name=".MapActivity"
             android:label="@string/title_activity_map" />
         <activity android:name=".MusicPlayerActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".Login" />
-        <activity android:name=".UserPref"></activity>
+        <activity android:name=".UserPref" />
+        <activity
+            android:name=".SideNav"
+            android:label="@string/title_activity_side_nav"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UserPreferences" />
+        <activity android:name=".SongList"></activity>
     </application>
 
 </manifest>

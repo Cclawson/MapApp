@@ -1,5 +1,4 @@
 <resources>
-<<<<<<< HEAD
     <string name="app_name">Foot Note</string>
 
     <string name="back"><![CDATA[<]]></string>
@@ -8,4 +7,10 @@
     <string name="pause">||</string>
     <string name="title_activity_map">Map</string>
     <string name="google_maps_key">AIzaSyDo1cqxl3Gq7J-toWLTu2a4KVmBPcwNFUc</string>
+    <string name="title_activity_side_nav">SideNav</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
