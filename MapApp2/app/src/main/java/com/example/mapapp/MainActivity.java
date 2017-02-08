@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         songList = new ArrayList<Song>();
 
-        getSongList();
+//        getSongList();
     }
 
     public void getSongList() {

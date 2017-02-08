@@ -1,22 +1,65 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mapapp.MainActivity">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
-    android:layout_height="400px"
-    tools:context="com.example.mapapp.MapActivity" />
+    tools:context="com.example.mapapp.MapActivity"
+    android:layout_height="300dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:text="Start Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:layout_toStartOf="@+id/button2"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Address"
+        android:id="@+id/startLoc" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:text="End Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finish"
+        android:layout_above="@+id/finishLoc"
+        android:layout_alignStart="@+id/start"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Address"
+        android:id="@+id/finishLoc"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <Button
         android:text="Create Route"
@@ -28,45 +71,4 @@
         android:onClick="OnMapButtonClick"
         />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Address"
-        android:ems="10"
-        android:layout_marginTop="57dp"
-        android:id="@+id/startLoc"
-        android:layout_below="@+id/map"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Address"
-        android:ems="10"
-        android:id="@+id/finishLoc"
-        android:layout_above="@+id/button2"
-        android:layout_alignStart="@+id/startLoc"
-        android:layout_marginBottom="41dp" />
-
-    <TextView
-        android:text="End Location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/finish"
-        android:layout_above="@+id/finishLoc"
-        android:layout_alignStart="@+id/start"
-        android:layout_marginBottom="11dp" />
-
-    <TextView
-        android:text="Start Location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/start"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/button2"
-        android:layout_marginEnd="12dp" />
-
-
-</RelativeLayout>
+</LinearLayout>
